@@ -1,6 +1,13 @@
 <template>
   <div class="page page-home">
-    <h1>Index page</h1>
+    <header class="header">
+      <button>back</button>
+      <h2 class="title">home</h2>
+      <button>menu</button>
+    </header>
+    <main class="content">
+      <h1>content</h1>
+    </main>
   </div>
 </template>
 
@@ -11,8 +18,22 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss" scoped>
 .page-home {
   background: $bg-color;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  > .title {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.box.ignore-px2vw {
+  height: 100px;
+}
+
 </style>

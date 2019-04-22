@@ -1,0 +1,45 @@
+@custom-media --low-resolution (max-device-pixel-ratio: 1.49),
+    (max-resolution: 143dpi),
+    (max-resolution: 1.49dppx);
+
+@custom-media --mid-resolution (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49),
+    (min-resolution: 144dpi) and (max-resolution: 239dpi),
+    (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx);
+
+@custom-media --high-resolution (min-device-pixel-ratio: 2.5),
+    (min-resolution: 240dpi),
+    (min-resolution: 2.5dppx);
+
+--border {
+    position: relative;
+    &::after {
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        content: "\0020";
+        transform-origin: 0 0;
+    }
+    @media (--low-resolution) {
+        &:after {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media (--mid-resolution) {
+        &:after {
+            width: 200%;
+            height: 200%;
+            transform: scale(0.5);
+        }
+    }
+    @media (--high-resolution) {
+        &:after {
+            width: 300%;
+            height: 300%;
+            transform: scale(0.333);
+        }
+    }
+}

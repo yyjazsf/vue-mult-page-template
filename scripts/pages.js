@@ -1,4 +1,6 @@
-
+/**
+ * vue.config.js pages config
+ */
 
 const titleSuffix = '-mult-pages-template';
 
@@ -7,5 +9,6 @@ module.exports = {
     // the object will be append vue's pages options
     title: `主页${titleSuffix}`
   },
-  about: `关于${titleSuffix}` // if it's string, it will be tittle
+  about: `关于${titleSuffix}`, // if it's string, it will be tittle
+  onepx: `一像素方案${titleSuffix}`
 }

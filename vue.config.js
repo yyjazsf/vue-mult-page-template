@@ -21,7 +21,7 @@ module.exports = {
   },
 
   pwa: {
-    name: 'xxqg',
+    name: 'pwa-project',
   },
 
   // https://cli.vuejs.org/zh/guide/browser-compatibility.html#polyfill
@@ -34,7 +34,7 @@ module.exports = {
     loaderOptions: {
       // 给 sass-loader 传递选项
       sass: {
-        data: '@import "~@/styles/variables.scss";',
+        data: '@import "~@/styles/common.scss";',
       },
     },
   },
